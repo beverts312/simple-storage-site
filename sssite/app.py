@@ -1,4 +1,5 @@
 import logging
+import os
 
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
@@ -17,6 +18,7 @@ logging.basicConfig(level=conf.log_level)
 app = FastAPI(version=__version__, title="Simple Storage Site")
 provider = GCSProvider(conf)
 templates = Jinja2Templates(directory=conf.resource_dir)
+os.makedirs(conf.local_storage_path, exist_ok=True)
 
 
 @app.get("/version", description="Get version")
