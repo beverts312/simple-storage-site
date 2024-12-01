@@ -1,0 +1,38 @@
+{
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    ".pytest_cache": true,
+    "htmlcov": true,
+    "venv": true,
+    "wolk/cov.xml": true,
+    "**/__pycache__": true,
+    ".coverage": true,
+    "*.egg-info": true,
+    "build": true,
+    "dist": true,
+    "coverage.xml": true,
+    ".scannerwork": true
+  },
+  "python.testing.pytestArgs": [
+    "--cov=wolk",
+    "--cov-report=xml:wolk/cov.xml",
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "coverage-gutters.coverageReportFileName": "cov.xml",
+  "coverage-gutters.coverageBaseDir": "./wolk"
+}

@@ -1,0 +1,13 @@
+venv
+__pycache__
+.coverage*
+.pytest_cache
+htmlcov
+ssite/cov.xml
+build
+*.egg-info
+*.whl
+dist
+coverage.xml
+.scannerwork
+tmp
