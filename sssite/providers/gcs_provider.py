@@ -1,7 +1,5 @@
 import os
 
-from google.cloud import storage
-
 from sssite.providers.storage_provider import StorageProvider
 from sssite.utils import ShellClient
 
@@ -9,7 +7,6 @@ from sssite.utils import ShellClient
 class GCSProvider(StorageProvider):
     def __init__(self, config):
         super().__init__(config)
-        self._client = storage.Client()
         self._gsutil = ShellClient("gsutil")
 
     @property
