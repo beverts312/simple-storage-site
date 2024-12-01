@@ -4,6 +4,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from starlette.background import BackgroundTask
 
 from sssite.providers import GCSProvider
 from sssite.version import __version__
@@ -43,10 +44,10 @@ async def custom_404_handler(request: Request, exc: Exception):
     request_path = request.url.path
     if request_path.startswith("/static"):
         page_name = request_path.replace("/static", "")
-        provider.sync(page_name)
         return templates.TemplateResponse(
             request=request,
             name="reloading-404.html.j2",
             context={"name": page_name},
+            background=BackgroundTask(provider.sync, page_name),
         )
-    return HTMLResponse("<h1>Custom 404 Page</h1>", status_code=404)
+    return HTMLResponse("<h1>404 Page</h1>", status_code=404)
