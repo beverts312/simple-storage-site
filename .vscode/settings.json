@@ -24,15 +24,16 @@
     "build": true,
     "dist": true,
     "coverage.xml": true,
-    ".scannerwork": true
+    ".scannerwork": true,
+    "node_modules": true
   },
   "python.testing.pytestArgs": [
-    "--cov=wolk",
-    "--cov-report=xml:wolk/cov.xml",
+    "--cov=sssite",
+    "--cov-report=xml:sssite/cov.xml",
     "tests"
   ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "coverage-gutters.coverageReportFileName": "cov.xml",
-  "coverage-gutters.coverageBaseDir": "./wolk"
+  "coverage-gutters.coverageBaseDir": "./sssite"
 }

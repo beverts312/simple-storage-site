@@ -11,3 +11,4 @@ dist
 coverage.xml
 .scannerwork
 tmp
+node_modules

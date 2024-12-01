@@ -1,0 +1,30 @@
+{
+  "name": "simple-storage-site",
+  "version": "0.0.0-dev",
+  "description": "A small python web server to help with serving content from object storage",
+  "scripts": {
+    "release": "semantic-release"
+  },
+  "release": {
+    "branches": [
+      {
+        "name": "main"
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ],
+    "publish": [
+      {
+        "path": "@semantic-release/github"
+      }
+    ],
+    "npmPublish": false,
+    "tagFormat": "${version}"
+  },
+  "devDependencies": {
+    "semantic-release": "24.2.0"
+  }
+}
