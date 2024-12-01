@@ -1,3 +1,4 @@
+import logging
 import os
 from enum import Enum
 
@@ -34,3 +35,7 @@ class SsiteConfig:
     @property
     def resource_dir(self):
         return f"{self.install_dir}/resources"
+
+    @property
+    def log_level(self):
+        return logging.DEBUG if os.getenv("SS_DEBUG") else logging.INFO

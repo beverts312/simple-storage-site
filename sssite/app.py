@@ -11,10 +11,10 @@ from sssite.version import __version__
 
 from .config import SsiteConfig
 
-logging.basicConfig(level=logging.DEBUG)
+conf = SsiteConfig()
+logging.basicConfig(level=conf.log_level)
 
 app = FastAPI(version=__version__, title="Simple Storage Site")
-conf = SsiteConfig()
 provider = GCSProvider(conf)
 templates = Jinja2Templates(directory=conf.resource_dir)
 
