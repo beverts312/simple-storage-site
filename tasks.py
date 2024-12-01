@@ -27,4 +27,4 @@ def check_format(c):
 @task(aliases=["dev"])
 def run_server(c):
     with c.cd(f"{get_project_root()}"):
-        c.run("fastapi dev ./ssite/app.py")
+        c.run("fastapi dev ./sssite/app.py")

@@ -2,8 +2,8 @@ import os
 
 from google.cloud import storage
 
-from ssite.providers.storage_provider import StorageProvider
-from ssite.utils import ShellClient
+from sssite.providers.storage_provider import StorageProvider
+from sssite.utils import ShellClient
 
 
 class GCSProvider(StorageProvider):

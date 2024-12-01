@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from logging import getLogger
 
-from ssite.config import SsiteConfig
+from sssite.config import SsiteConfig
 
 
 class StorageProvider(ABC):
