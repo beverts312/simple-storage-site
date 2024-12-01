@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>{{name}}</title>
+  </head>
+  <body>
+    <ul>
+    {% for page in pages %}
+    <li><a href="/static/{{page}}">{{page}}</a></li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
