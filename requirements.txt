@@ -1,2 +1,2 @@
-uvicorn[standard]==0.32.1
+uvicorn[standard]==0.34.0
 fastapi[standard]==0.115.5
